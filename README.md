@@ -272,12 +272,11 @@ Habits can use 8 colors:
 - Keep components small and focused
 - Add comments for complex logic
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 👥 Authors
 
+**Mayur** - [@mrpawarGit](https://github.com/mrpawarGit)
+
+**Akash** - [@Akashpandit01](https://github.com/Akashpandit01)
 
 ## 🙏 Acknowledgments
 
