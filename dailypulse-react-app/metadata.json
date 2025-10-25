@@ -1,0 +1,6 @@
+
+{
+  "name": "DailyPulse: Personal Wellness & Habit Tracker",
+  "description": "A comprehensive web application to track habits, monitor moods, and visualize personal wellness trends. Built with React and Tailwind CSS, DailyPulse helps you build consistency and achieve your goals through a gamified and insightful interface.",
+  "requestFramePermissions": []
+}
