@@ -1,4 +1,3 @@
-// components/landing/LandingPage.tsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { CheckCircle, TrendingUp, Zap } from "lucide-react";
@@ -10,7 +9,7 @@ const LandingPage: React.FC = () => {
 
   return (
     <div
-      className={`min-h-screen font-sans antialiased text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-white ${theme}`}
+      className={`min-h-screen font-sans antialiased text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-white`}
     >
       {/* Header */}
       <header className="absolute top-0 left-0 right-0 z-10 p-4">
