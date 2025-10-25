@@ -1,23 +1,28 @@
-# 🌟 DailyPulse - Personal Wellness & Habit Tracker (Frontend)
+# 🌟 DailyPulse - Personal Wellness & Habit Tracker
 
-A modern, responsive habit tracking application built with React, TypeScript, and Tailwind CSS. Track your daily habits, log your mood, visualise your progress, and build lasting streaks.
+A modern, responsive habit tracking application built with React, TypeScript, and Tailwind CSS. Track your daily habits, log your mood, visualize your progress, and build lasting streaks.
+
+![DailyPulse Banner](https://img.shields.io/badge/DailyPulse-Live-brightgreen) ![React](https://img.shields.io/badge/React-19.2.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.2-blue) ![License](https://img.shields.io/badge/License-MIT-yellow)
+
+## 🚀 Live Demo → [**Visit DailyPulse**](https://daily-pulse-app.vercel.app/)
 
 ## ✨ Features
 
 ### Core Features
-- 🎯 **Habit Management**: Create, edit, and track both boolean and countable habits
-- 📊 **Analytics Dashboard**: Visualize weekly trends, category breakdowns, and mood patterns
+- 🎯 **Habit Management**: Create, edit, delete, and track both boolean and countable habits
+- 📊 **Analytics Dashboard**: Visualise weekly trends, category breakdowns, and mood patterns
 - 😊 **Mood Tracking**: Log daily moods with emoji-based interface
 - 🔥 **Streak Counter**: Maintain and visualize your consistency streaks
 - 💪 **Progress Tracking**: Real-time progress rings and completion percentages
 - 💡 **Motivational Quotes**: Daily inspiration to keep you going
 
 ### UI/UX Features
-- 🌓 **Dark/Light Mode**: Seamless theme switching with system preference detection
-- 📱 **Responsive Design**: Works beautifully on mobile, tablet, and desktop
+- 🌓 **Dark/Light Mode**: Seamless theme switching with persistent preferences
+- 📱 **Fully Responsive**: Works beautifully on mobile, tablet, and desktop
 - 🎨 **Custom Color Themes**: 8 color options for habit categorization
 - ⚡ **Fast Performance**: Optimized with React 19 and Vite
 - 🔒 **Authentication Flow**: Complete landing, login, and signup pages
+- 🍔 **Mobile Navigation**: Hamburger menu for seamless mobile experience
 
 ### Data Features
 - 💾 **Local Storage**: Automatic data persistence
@@ -128,40 +133,42 @@ npm run preview
 
 ```
 dailypulse-frontend/
-├── src/
-│   ├── components/
-│   │   ├── analytics/
-│   │   │   └── Analytics.tsx           # Analytics dashboard with charts
-│   │   ├── auth/
-│   │   │   ├── LoginPage.tsx          # Login page
-│   │   │   └── SignupPage.tsx         # Signup page
-│   │   ├── common/
-│   │   │   ├── LoadingSpinner.tsx     # Loading indicator
-│   │   │   └── Sidebar.tsx            # Navigation sidebar
-│   │   ├── dashboard/
-│   │   │   ├── Dashboard.tsx          # Main dashboard
-│   │   │   ├── MoodSelector.tsx       # Mood selection component
-│   │   │   ├── MotivationalQuote.tsx  # Quote display
-│   │   │   ├── ProgressRing.tsx       # Circular progress indicator
-│   │   │   └── StreakCounter.tsx      # Streak display
-│   │   ├── habits/
-│   │   │   ├── HabitCard.tsx          # Individual habit card
-│   │   │   └── HabitForm.tsx          # Habit creation/edit modal
-│   │   ├── landing/
-│   │   │   └── LandingPage.tsx        # Marketing landing page
-│   │   └── MainApp.tsx                # Main authenticated app wrapper
-│   ├── context/
-│   │   └── ThemeContext.tsx           # Dark/Light mode context
-│   ├── hooks/
-│   │   ├── useMindTrack.ts            # Main application logic hook
-│   │   └── useAuth.tsx                # Authentication hook (optional)
-│   ├── services/
-│   │   └── mockApi.ts                 # Mock API for development
-│   ├── types.ts                       # TypeScript type definitions
-│   ├── App.tsx                        # App root with routing
-│   └── index.tsx                      # Application entry point
+├── components/
+│   ├── analytics/
+│   │   └── Analytics.tsx           # Analytics dashboard with charts
+│   ├── auth/
+│   │   ├── LoginPage.tsx          # Login page
+│   │   └── SignupPage.tsx         # Signup page
+│   ├── common/
+│   │   ├── LoadingSpinner.tsx     # Loading indicator
+│   │   ├── Sidebar.tsx            # Navigation sidebar
+│   │   └── ThemeToggle.tsx        # Theme toggle button
+│   ├── dashboard/
+│   │   ├── Dashboard.tsx          # Main dashboard
+│   │   ├── MoodSelector.tsx       # Mood selection component
+│   │   ├── MotivationalQuote.tsx  # Quote display
+│   │   ├── ProgressRing.tsx       # Circular progress indicator
+│   │   └── StreakCounter.tsx      # Streak display
+│   ├── habits/
+│   │   ├── HabitCard.tsx          # Individual habit card
+│   │   └── HabitForm.tsx          # Habit creation/edit modal
+│   ├── landing/
+│   │   └── LandingPage.tsx        # Marketing landing page
+│   └── MainApp.tsx                # Main authenticated app wrapper
+├── context/
+│   └── ThemeContext.tsx           # Dark/Light mode context
+├── hooks/
+│   └── useMindTrack.ts            # Main application logic hook
+├── services/
+│   ├── api.ts                     # API service layer
+│   └── mockApi.ts                 # Mock API for development
+├── types.ts                       # TypeScript type definitions
+├── App.tsx                        # App root with routing
+├── index.tsx                      # Application entry point
 ├── public/
-├── .env                               # Environment variables
+│   ├── logo.svg                   # Application logo
+│   └── vercel.json                # Vercel configuration
+├── .env                           # Environment variables
 ├── .gitignore
 ├── index.html
 ├── package.json
@@ -179,6 +186,11 @@ dailypulse-frontend/
 | `npm run build` | Build for production |
 | `npm run preview` | Preview production build locally |
 
+## 🔌 Backend Integration
+
+This frontend works with the DailyPulse backend API. 
+
+**Backend Repository**: [DailyPulse-Backend](https://github.com/mrpawarGit/DailyPulse-Backend)
 
 ### Authentication Flow
 
@@ -188,6 +200,17 @@ The app uses JWT tokens for authentication:
 2. Token stored in localStorage
 3. Token sent in `Authorization: Bearer <token>` header for protected routes
 4. Token expires after 7 days (configurable in backend)
+
+### API Endpoints Used
+
+- `POST /api/auth/signup` - User registration
+- `POST /api/auth/login` - User login
+- `GET /api/habits` - Get all habits
+- `POST /api/habits` - Create new habit
+- `PUT /api/habits/:id` - Update habit
+- `DELETE /api/habits/:id` - Delete habit
+- `POST /api/logs` - Log habit progress
+- `POST /api/moods` - Log daily mood
 
 ## 🧩 Components Overview
 
@@ -205,11 +228,12 @@ The app uses JWT tokens for authentication:
 
 **Authentication:**
 - `LandingPage.tsx` - Marketing page with features
-- `LoginPage.tsx` - Login form
-- `SignupPage.tsx` - Registration form
+- `LoginPage.tsx` - Login form with validation
+- `SignupPage.tsx` - Registration form with validation
 
 **Common:**
-- `Sidebar.tsx` - Collapsible navigation sidebar
+- `Sidebar.tsx` - Responsive navigation sidebar with user profile
+- `ThemeToggle.tsx` - Floating theme toggle button
 - `LoadingSpinner.tsx` - Loading state indicator
 
 ### Custom Hooks
@@ -219,6 +243,7 @@ The app uses JWT tokens for authentication:
 - Calculates completion percentages
 - Handles mood tracking
 - Provides analytics data
+- Syncs with localStorage
 
 ## 🎨 Styling
 
@@ -238,6 +263,7 @@ Light/Dark mode implemented via:
 - LocalStorage persistence
 - System preference detection
 - Smooth transitions
+- Floating toggle button on all pages
 
 ### Color Palette
 
@@ -245,8 +271,45 @@ Habits can use 8 colors:
 - Blue, Green, Red, Yellow
 - Purple, Indigo, Pink, Gray
 
-## 🤝 Contributing
+## 🚢 Deployment
 
+### Deployed on Vercel
+
+The application is deployed and live at: **[https://daily-pulse-app.vercel.app/](https://daily-pulse-app.vercel.app/)**
+
+### Deploy Your Own
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/mrpawarGit/DailyPulse-Frontend)
+
+**Steps to deploy:**
+
+1. **Fork this repository**
+2. **Import to Vercel**:
+   - Go to [vercel.com](https://vercel.com)
+   - Click "Import Project"
+   - Select your forked repository
+3. **Configure Environment Variables**:
+   ```
+   VITE_API_URL=your_backend_api_url
+   ```
+4. **Deploy!**
+
+### Vercel Configuration
+
+The `vercel.json` file is included for proper routing:
+
+```
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+```
+
+This ensures React Router works correctly with page refreshes.
 
 ### Code Style
 
@@ -255,28 +318,47 @@ Habits can use 8 colors:
 - Use functional components with hooks
 - Keep components small and focused
 - Add comments for complex logic
+- Write meaningful commit messages
+
+## 🐛 Known Issues
+
+None at the moment! If you find any bugs, please [open an issue](https://github.com/mrpawarGit/DailyPulse-Frontend/issues).
 
 ## 👥 Authors
 
-**Mayur** - [@mrpawarGit](https://github.com/mrpawarGit)
+**Mayur Pawar** - [@mrpawarGit](https://github.com/mrpawarGit)
 
-**Akash** - [@Akashpandit01](https://github.com/Akashpandit01)
+**Akash Pandit** - [@Akashpandit01](https://github.com/Akashpandit01)
 
 ## 🙏 Acknowledgments
 
 - [Recharts](https://recharts.org/) for beautiful charts
 - [Lucide](https://lucide.dev/) for icons
 - [Tailwind CSS](https://tailwindcss.com/) for styling
-- React and Vite teams for amazing tools
+- [Vite](https://vitejs.dev/) for blazing fast build tool
+- [Vercel](https://vercel.com/) for hosting
+- React and TypeScript communities for amazing tools
 
 ## 🗺️ Roadmap
 
+- [x] Core habit tracking
+- [x] Mood logging
+- [x] Analytics dashboard
+- [x] Dark/Light theme
+- [x] Mobile responsive design
+- [x] Deployment to Vercel
+- [x] Backend API integration
 - [ ] Social features (friends, leaderboard)
 - [ ] Push notifications
-- [ ] Mobile app (React Native)
 - [ ] AI-powered habit suggestions
 - [ ] Export data to CSV/PDF
 - [ ] Integration with wearables
+
+## 📊 Project Stats
+
+![GitHub stars](https://img.shields.io/github/stars/mrpawarGit/DailyPulse-Frontend?style=social)
+![GitHub forks](https://img.shields.io/github/forks/mrpawarGit/DailyPulse-Frontend?style=social)
+![GitHub issues](https://img.shields.io/github/issues/mrpawarGit/DailyPulse-Frontend)
 
 ---
 
