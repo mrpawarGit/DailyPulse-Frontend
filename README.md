@@ -2,22 +2,6 @@
 
 A modern, responsive habit tracking application built with React, TypeScript, and Tailwind CSS. Track your daily habits, log your mood, visualise your progress, and build lasting streaks.
 
-## 📋 Table of Contents
-
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Running the Application](#running-the-application)
-- [Project Structure](#project-structure)
-- [Available Scripts](#available-scripts)
-- [API Integration](#api-integration)
-- [Components Overview](#components-overview)
-- [Styling](#styling)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## ✨ Features
 
 ### Core Features
