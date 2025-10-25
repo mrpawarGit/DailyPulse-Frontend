@@ -1,4 +1,3 @@
-// App.tsx
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -6,6 +5,7 @@ import LandingPage from "./components/landing/LandingPage";
 import LoginPage from "./components/auth/LoginPage";
 import SignupPage from "./components/auth/SignupPage";
 import MainApp from "./components/MainApp";
+import ThemeToggle from "./components/common/ThemeToggle";
 
 // Protected route component
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({
@@ -35,6 +35,9 @@ const App: React.FC = () => {
   return (
     <ThemeProvider>
       <BrowserRouter>
+        {/* Theme Toggle Button - Available on all pages */}
+        <ThemeToggle />
+
         <Routes>
           {/* Public Routes */}
           <Route

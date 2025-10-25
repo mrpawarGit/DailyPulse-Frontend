@@ -83,7 +83,8 @@ const MainApp: React.FC = () => {
         onAddHabit={handleAddHabitClick}
         onLogout={handleLogout}
       />
-      <main className="flex-1 p-4 sm:p-6 lg:p-8 overflow-y-auto">
+      {/* Main content with padding for mobile menu button */}
+      <main className="flex-1 p-4 pt-20 sm:p-6 lg:p-8 lg:pt-8 overflow-y-auto">
         {activeView === "dashboard" && (
           <Dashboard
             habits={state.habits}
