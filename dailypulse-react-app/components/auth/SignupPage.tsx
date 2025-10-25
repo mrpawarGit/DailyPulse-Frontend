@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTheme } from "../../context/ThemeContext";
 import { authApi } from "../../services/api";
+import { ArrowLeft } from "lucide-react";
 
 const SignupPage: React.FC = () => {
   const { theme } = useTheme();
@@ -39,6 +40,17 @@ const SignupPage: React.FC = () => {
     <div
       className={`min-h-screen flex flex-col justify-center items-center font-sans antialiased text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-white ${theme}`}
     >
+      {/* Back to Home Button */}
+      <div className="absolute top-4 left-4">
+        <button
+          onClick={() => navigate("/")}
+          className="flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors shadow-md"
+        >
+          <ArrowLeft size={18} />
+          <span>Back to Home</span>
+        </button>
+      </div>
+
       <div className="w-full max-w-md p-8 space-y-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
         <div className="flex flex-col items-center space-y-2">
           <div className="bg-blue-600 p-3 rounded-full">
