@@ -16,6 +16,7 @@ const MainApp: React.FC = () => {
   const {
     state,
     addHabit,
+    deleteHabit,
     updateHabitProgress,
     setMoodForToday,
     getTodayLog,
@@ -25,7 +26,6 @@ const MainApp: React.FC = () => {
   const [isHabitFormOpen, setIsHabitFormOpen] = useState(false);
   const [editingHabit, setEditingHabit] = useState<Habit | null>(null);
 
-  // Determine active view from URL
   const activeView = location.pathname.includes("analytics")
     ? "analytics"
     : "dashboard";
@@ -52,6 +52,12 @@ const MainApp: React.FC = () => {
 
   const handleSaveHabit = (habit: Habit) => {
     addHabit(habit);
+    setIsHabitFormOpen(false);
+    setEditingHabit(null);
+  };
+
+  const handleDeleteHabit = (habitId: string) => {
+    deleteHabit(habitId);
     setIsHabitFormOpen(false);
     setEditingHabit(null);
   };
@@ -83,7 +89,7 @@ const MainApp: React.FC = () => {
         onAddHabit={handleAddHabitClick}
         onLogout={handleLogout}
       />
-      <main className="flex-1 p-4 sm:p-6 lg:p-8 overflow-y-auto">
+      <main className="flex-1 p-4 pt-20 sm:p-6 lg:p-8 lg:pt-8 overflow-y-auto">
         {activeView === "dashboard" && (
           <Dashboard
             habits={state.habits}
@@ -107,6 +113,7 @@ const MainApp: React.FC = () => {
           isOpen={isHabitFormOpen}
           onClose={() => setIsHabitFormOpen(false)}
           onSave={handleSaveHabit}
+          onDelete={handleDeleteHabit}
           habitToEdit={editingHabit}
         />
       )}

@@ -1,41 +1,85 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DailyPulse: Personal Wellness & Habit Tracker</title>
+    <title>DailyPulse - Personal Wellness & Habit Tracker</title>
+
+    <!-- Favicon for different devices -->
+    <!-- Replace the favicon section with: -->
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/logo-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo-192x192.png" />
+
+    <!-- <link rel="manifest" href="/manifest.json" /> -->
+
+    <!-- Primary Meta Tags -->
+    <meta
+      name="title"
+      content="DailyPulse - Personal Wellness & Habit Tracker"
+    />
+    <meta
+      name="description"
+      content="Build habits that last. Track your daily progress, log your mood, and achieve your wellness goals with DailyPulse."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="DailyPulse - Personal Wellness & Habit Tracker"
+    />
+    <meta
+      property="og:description"
+      content="Build habits that last. Track your daily progress, log your mood, and achieve your wellness goals."
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:title"
+      content="DailyPulse - Personal Wellness & Habit Tracker"
+    />
+    <meta
+      property="twitter:description"
+      content="Build habits that last. Track your daily progress, log your mood, and achieve your wellness goals."
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <script>
       tailwind.config = {
-        darkMode: 'class',
+        darkMode: "class",
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
+              sans: ["Inter", "sans-serif"],
             },
           },
         },
+      };
+    </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "lucide-react": "https://aistudiocdn.com/lucide-react@^0.548.0",
+          "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+          "react/": "https://aistudiocdn.com/react@^19.2.0/",
+          "react": "https://aistudiocdn.com/react@^19.2.0",
+          "date-fns": "https://aistudiocdn.com/date-fns@^4.1.0"
+        }
       }
     </script>
-  <script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.548.0",
-    "recharts": "https://aistudiocdn.com/recharts@^3.3.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "date-fns": "https://aistudiocdn.com/date-fns@^4.1.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
   <body class="bg-gray-50 dark:bg-gray-900">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
