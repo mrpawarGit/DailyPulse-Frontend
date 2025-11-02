@@ -2,12 +2,14 @@
 
 A modern, responsive habit tracking application built with React, TypeScript, and Tailwind CSS. Track your daily habits, log your mood, visualize your progress, and build lasting streaks.
 
+![DailyPulse Banner](https://img.shields.io/badge/DailyPulse-Live-brightgreen) ![React](https://img.shields.io/badge/React-19.2.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.2-blue) ![License](https://img.shields.io/badge/License-MIT-yellow)
+
 # 📥 Backend Repository 
 ### DailyPulse Backend API - https://github.com/mrpawarGit/DailyPulse-Backend
 
-![DailyPulse Banner](https://img.shields.io/badge/DailyPulse-Live-brightgreen) ![React](https://img.shields.io/badge/React-19.2.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.8.2-blue) ![License](https://img.shields.io/badge/License-MIT-yellow)
-
 ## 🚀 Live Demo → [**Visit DailyPulse**](https://daily-pulse-app.vercel.app/)
+
+<img width="1914" height="958" alt="image" src="https://github.com/user-attachments/assets/84f4a406-49a7-42ce-91b6-901970abe306" />
 
 ## ✨ Features
 
