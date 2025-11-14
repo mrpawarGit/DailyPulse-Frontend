@@ -101,7 +101,7 @@ The app runs on **port 5000** by default. To change it, edit `vite.config.ts`:
 ```
 export default defineConfig({
   server: {
-    port: 5000, // Change this to your desired port
+    port: 5000, // your desired port
     host: '0.0.0.0',
   },
   // ... rest of config
