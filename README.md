@@ -7,7 +7,7 @@ A modern, responsive habit tracking application built with React, TypeScript, an
 # 📥 Backend Repository 
 ### DailyPulse Backend API - https://github.com/mrpawarGit/DailyPulse-Backend
 
-## 🚀🌐 Live Demo → [**Visit DailyPulse**](https://daily-pulse-app.vercel.app/)
+## 🚀 Live Demo → [**Visit DailyPulse**](https://daily-pulse-app.vercel.app/)
 
 <img width="1914" height="958" alt="image" src="https://github.com/user-attachments/assets/84f4a406-49a7-42ce-91b6-901970abe306" />
 
